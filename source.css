@@ -1,6 +1,6 @@
 body {
-  font-family: "Playfair Display", serif;
-  color: rgb(9, 75, 133);
+  font-family: 'Varela Round', sans-serif;
+  color: #4756ca;
 }
 
 h1 {
@@ -8,6 +8,7 @@ h1 {
   margin: 20px;
   font-weight: 500;
   font-size: 40px;
+  margin-bottom: 0;
 }
 
 h2 {
@@ -17,7 +18,7 @@ h2 {
 h3 {
   text-align: center;
   opacity: 75%;
-  font-size: 15px;
+  font-size: 20px;
   margin-bottom: 20px;
 }
 
@@ -44,18 +45,32 @@ footer {
   max-width: fit-content;
   
 }
+.date{
+  font-size: 25px;
+margin-bottom: 0;
+margin-top: 0;
+}
+
+.icon{
+  display: block;
+margin: 0 auto;
+text-align: center;
+}
 
 .temperature {
   font-weight: bold;
+  margin-bottom: 0;
 }
 .temperatureMin {
   opacity: 80%;
+  margin-bottom: 0;
 }
 
 .description {
   display: block;
   text-align: center;
   font-size: 20px;
+  margin-top: 0;
 }
 .sun {
   color: rgb(203, 203, 86);

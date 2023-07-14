@@ -30,8 +30,8 @@ let currentDate = document.querySelector("h1#date");
 currentDate.innerHTML = formatDate;
 
 function searchCity(city) {
-    let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiKey = "e852e002t3a2a44o7a23fa349fd1bcd4";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(showWeather);
   }
 
@@ -43,33 +43,31 @@ function searchCity(city) {
   function showWeather(response) {
     console.log(response.data);
      document.querySelector("#temp").innerHTML = 
-     Math.round(response.data.main.temp);
-    
-    document.querySelector("#temp-min").innerHTML =
-     Math.round(response.data.main.temp_min);
-    
+     Math.round(response.data.temperature.current);
     document.querySelector("#wind").innerHTML = 
     Math.round(response.data.wind.speed);
-    
+    let iconElement = document.querySelector("#icon");
+    console.log(response.data.condition.icon_url);
+    iconElement.setAttribute("src", ` ${response.data.condition.icon_url} `);
    
     document.querySelector("#humidity").innerHTML = 
-    Math.round(response.data.main.humidity);
+    Math.round(response.data.temperature.humidity);
     
    document.querySelector("#city").innerHTML =
-   response.data.name;
+   response.data.city;
     
     document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+    response.data.condition.description;
   }
   
   let citySearch = document.querySelector("#search-form");
   citySearch.addEventListener("submit", handleSubmit);
   
   function retrievePosition(position) {
-    let apiKey = "80e98c1f9b189c5222b5d0b3dc2f051c";
-    let lat = position.coords.latitude;
-    let lon = position.coords.longitude;
-    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+    let apiKey = "e852e002t3a2a44o7a23fa349fd1bcd4";
+    let lat = position.coordinates.latitude;
+    let lon = position.coordinates.longitude;
+    let url = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}&units=metric`;
     axios.get(url).then(showWeather);
   }
   
@@ -84,7 +82,9 @@ function searchCity(city) {
   searchCity("London");
   
   
-  
+  //let iconElement = document.querySelector("#icon");
+  //console.log(response.data.condition.icon_url);
+ //iconElement.setAttribute("src", `${response.data.condition.icon_url}`);
   
   
   
