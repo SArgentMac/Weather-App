@@ -73,8 +73,17 @@ text-align: center;
   margin-top: 0;
 }
 
+.units .active {
+  color: #4756ca;
+ cursor: default; 
+ text-decoration: none;
+}
+
+.units .active :hover {
+  text-decoration: none;
+}
+
 .forecastOne {
- 
   text-align: center;
 list-style: none;
 }
