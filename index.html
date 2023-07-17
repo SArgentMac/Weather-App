@@ -38,34 +38,48 @@
         </div>
       </div>
     </form>
-      <h1 id="city">Edinburgh</h1>
+      <h1 id="city"></h1>
       <h1 id="date" class="date"></h1>
       <div class="icon"><img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png" alt="" id="icon"></div>
       <h2>
-        <span class="temperature"><span id="temp">19</span>°C </span>
+        <strong id="temp"></strong>
+        <span class="units"><a href="#" id="celsius-link" >°C</a> |
+            <a href="#" id="fahrenheit-link">°F</a></span>
          
       <h2 id="description" class="description">cloudy</h2>
       <h3>Humidity:<span id="humidity">49</span>% Wind:<span id="wind">4</span> mph</h3>
-      <div class="container text-center">
+      <div class="container text-center" class="forecast">
         <div class="row">
-          <div class="col">
-
-            <div class="suncloud"><i class="fa-solid fa-cloud-sun"></i></div> </br>
-           <strong> Sat </br> 19°C</strong> </br> 12°C
+          <div class="col-2">
+            <div class="firstDay" id="first-icon"><img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png" alt=""></div>
+            <div id="day-one"><strong>Sun </strong></div>
+            <div id="one-max">21°C</div>
+              <div id="one-min">10°C</div>
           </div>
-
-          <div class="col">
-            <div class="sunrain"><i class="fa-solid fa-cloud-sun-rain"></i></div> </br>
-            <strong>Sun </br> 21°C</strong> </br> 12°C</div>
-          <div class="col">
-            <div class="rain"><i class="fa-solid fa-cloud-rain" ></i></div> </br>
-           <strong>Mon </br> 22°C</strong>  </br> 13°C</div>
-          <div class="col">
-           <div class="rain"><i class="fa-solid fa-cloud-rain" ></i></div>  </br>
-           <strong> Tue </br> 21°C</strong> </br> 13°C</div>
-          <div class="col">
-          <div class="storm"> <i class="fa-solid fa-cloud-bolt" ></i></div> </br>
-         <strong>   Wed </br> 20°C</strong> </br> 12°C</div>
+          <div class="col-2">
+            <div class="secondDay" id="second-icon"><img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png" alt=""></div>
+            <div id="day-two"><strong>Sun </strong></div>
+            <div id="two-max">21°C</div>
+              <div id="two-min">10°C</div>
+            </div>
+            <div class="col-2">
+              <div class="thirdDay" id="third-icon"><img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png" alt=""></div>
+              <div id="day-three"><strong>Sun </strong></div>
+              <div id="three-max">21°C</div>
+                <div id="three-min">10°C</div>
+              </div>
+              <div class="col-2">
+                <div class="forthDay" id="forth-icon"><img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png" alt=""></div>
+                <div id="day-four"><strong>Sun </strong></div>
+                <div id="four-max">21°C</div>
+                  <div id="four-min">10°C</div>
+                </div>
+                <div class="col-2">
+                  <div class="fifthDay" id="fifth-icon"><img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png" alt=""></div>
+                  <div id="day-five"><strong>Sun </strong></div>
+                  <div id="five-max">21°C</div>
+                    <div id="five-min">10°C</div>
+                  </div>
         </div>
         
       </div>

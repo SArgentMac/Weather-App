@@ -72,6 +72,18 @@ text-align: center;
   font-size: 20px;
   margin-top: 0;
 }
+
+.forecastOne {
+ 
+  text-align: center;
+list-style: none;
+}
+
+.firstIcon { 
+  display: block;
+  margin: 0 auto;
+ min-width: 30px;
+}
 .sun {
   color: rgb(203, 203, 86);
   text-align: center;
