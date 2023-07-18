@@ -73,53 +73,18 @@ text-align: center;
   margin-top: 0;
 }
 
-.units .active {
-  color: #4756ca;
- cursor: default; 
- text-decoration: none;
-}
 
-.units .active :hover {
-  text-decoration: none;
-}
-
-.forecastOne {
+.weather-forecast {
   text-align: center;
-list-style: none;
+  margin-top: 20px;
 }
-
-.firstIcon { 
-  display: block;
-  margin: 0 auto;
- min-width: 30px;
+.weather-forecast-date {
+  font-weight:600;
 }
-.sun {
-  color: rgb(203, 203, 86);
-  text-align: center;
-  font-size: 60px;
-  margin-bottom: 15px;
+.weather-forecast-temperature-max{
+  font-weight: bold;
 }
-
-.suncloud {
-  color: rgb(196, 196, 97);
-  font-size: 30px;
-}
-
-.sunrain {
-  color: rgb(64, 131, 224);
-  font-size: 30px;
-}
-
-.rain {
-  color: rgb(69, 69, 219);
-  font-size: 30px;
-}
-
-.storm {
-  color: gray;
-  font-size: 30px;
-}
-
+.weather-forecast-temperature-mim { opacity: 70%;}
 footer {
   padding:0px;
   font-size: 15px;
