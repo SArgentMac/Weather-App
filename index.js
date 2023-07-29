@@ -2,9 +2,11 @@ function formatDate (timestamp){
   let date = new Date(timestamp);
   
   let hours = date.getHours();
+  
   if (hours < 10) {
     hours = `0${hours}`;
   }
+  
   
   let minutes = date.getMinutes();
   if (minutes < 10) {
@@ -22,10 +24,10 @@ function formatDate (timestamp){
     "Saturday",
   ];
   let day = days[dayIndex];
-  
-  return `${day} ${hours}:${minutes}`;
-  }
-  
+
+    return `${day} ${hours}:${minutes}`;
+ }
+
   function formatDay(timestamp) {
     let date = new Date(timestamp * 1000);
     let day = date.getDay();
@@ -35,7 +37,7 @@ function formatDate (timestamp){
   }
   
   function displayForecast(response){
-    console.log (response);
+
     let forecast = response.data.daily;
   
     let forecastElement = document.querySelector("#forecast");
@@ -81,7 +83,7 @@ function formatDate (timestamp){
   }
   
     function showWeather(response) {
-      console.log(response.data);
+     
     
       document.querySelector("#wind").innerHTML = 
       Math.round(response.data.wind.speed);
@@ -102,6 +104,7 @@ function formatDate (timestamp){
       currentDate.innerHTML = formatDate(response.data.time * 1000);
   
        document.querySelector("#temp").innerHTML = Math.round(response.data.temperature.current);
+      
        getForecast(response.data.coordinates);
   
     }
@@ -123,8 +126,9 @@ function formatDate (timestamp){
     }
     
     
-    
   let theLocation = document.querySelector("#current-location");
     theLocation.addEventListener("click", currentPosition);
     
     searchCity("London");
+
+ 

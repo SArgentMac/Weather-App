@@ -24,14 +24,14 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-      <form class="search-form" id="search-form">
-      <div class="row">
+      <div class="weather-app" id="weather-app" >
+      <form id="search-form">
+      <div class="row" class="search-form" >
         <div class="col-6">
-          <input type="text" class="form-control" placeholder="Location" id="search-input" />
+          <input type="text" class="form-control" placeholder="Location" autocomplete="off" id="search-input" />
         </div>
         <div class="col-3">
-          <input type="submit" value="Search" class="btn btn-primary" id="search-button"/>
+          <input type="submit"  value="Search" class="btn btn-primary" id="search-button"/>
         </div>
         <div class="col-3">
           <input type="submit" value="My Location" class="btn btn-success" id="current-location"/>
@@ -49,10 +49,10 @@
       <h3>Humidity:<span id="humidity">49</span>% Wind:<span id="wind">4</span> mph</h3>
       <div class="weather-forecast" id="forecast"></div>
       </div>
-      
+       <p class="signature"> <a href="https://github.com/SArgentMac/Weather-App" target="Github"  > open-soured code on Github</a> by Seren Argent  </p>
     </div>
-    <footer> <a href="https://github.com/SArgentMac/Weather-App" target="Github"  class="footer"> open-soured on Github</a> by Seren Argent  </footer>
     </div>
+   
 <script src="index.js"></script>
   </body>
 </html>
